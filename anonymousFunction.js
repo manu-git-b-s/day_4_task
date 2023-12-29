@@ -78,3 +78,20 @@ const returnPalindromes = function (arr) {
 };
 
 returnPalindromes(["hello", "madam", "radar", "civic", "google"]);
+
+// 1.f Return median of two sorted arrays of the same size.
+const median = function (arr1, arr2) {
+  let mergedArray = [...arr1, ...arr2].sort((a, b) => a - b);
+  console.log(mergedArray);
+};
+
+median([23, 6, 89], [90, 55, 2]);
+
+// 1.h Rotate an array by k times
+const rotateArray = function (arr, numberOfRotaions) {
+  for (let i = 0; i < numberOfRotaions; i++) {
+    arr.unshift(arr.pop());
+  }
+  console.log("Rotate", arr);
+};
+rotateArray([1, 2, 3, 4, 5, 6, 7], 3);

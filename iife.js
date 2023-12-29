@@ -63,3 +63,11 @@
   }
   console.log("palindromes", palindromes);
 })(["hello", "madam", "radar", "civic", "google"]);
+
+// 1.h Rotate an array by k times
+(function (arr, numberOfRotaions) {
+  for (let i = 0; i < numberOfRotaions; i++) {
+    arr.unshift(arr.pop());
+  }
+  console.log("Rotate", arr);
+})([1, 2, 3, 4, 5, 6, 7], 3);
