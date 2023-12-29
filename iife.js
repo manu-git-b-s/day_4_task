@@ -64,7 +64,32 @@
   console.log("palindromes", palindromes);
 })(["hello", "madam", "radar", "civic", "google"]);
 
-// 1.h Rotate an array by k times
+// 1.f Return median of two sorted arrays of the same size.
+(function (arr1, arr2) {
+  let mergedArray = arr1.concat(arr2).sort(function (a, b) {
+    return a - b;
+  });
+  let median;
+  if (mergedArray.length % 2 === 0) {
+    median = (mergedArray[mergedArray.length / 2 - 1] + mergedArray[mergedArray.length / 2]) / 2;
+  } else {
+    median = mergedArray[Math.floor(mergedArray.length / 2)];
+  }
+  console.log("Median", median);
+})([1, 3, 5, 7], [2, 4, 6, 8]);
+
+// 1.g Remove duplicates from an array
+(function (arr) {
+  let uniqueArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (uniqueArray.indexOf(arr[i]) === -1) {
+      uniqueArray.push(arr[i]);
+    }
+  }
+  console.log("UniqueArray", uniqueArray);
+})([1, 2, 2, 3, 4, 4, 5]);
+
+// 1.h Rotate an array by k times.
 (function (arr, numberOfRotaions) {
   for (let i = 0; i < numberOfRotaions; i++) {
     arr.unshift(arr.pop());
